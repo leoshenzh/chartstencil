@@ -1,0 +1,7801 @@
+{
+  "description": "Registered chart types. Shapes contain field names and primitive types, not source values or a validation schema.",
+  "modules": [
+    "renderer",
+    "core-base",
+    "core-units",
+    "core-cartesian",
+    "core-matrix",
+    "core-distributions",
+    "core-networks",
+    "core-radial",
+    "core-dynamic",
+    "trajectory",
+    "multiples",
+    "capabilities",
+    "ribbons",
+    "timeseries",
+    "bubbles",
+    "flows",
+    "bars",
+    "waffle",
+    "treemap",
+    "slope",
+    "range-bubbles",
+    "grouped-bars",
+    "donut",
+    "stacked-area",
+    "stacked-bars",
+    "proportional-squares",
+    "bubble-comparison",
+    "radial-timeline",
+    "pictogram",
+    "venn",
+    "timeline-table",
+    "range-dot",
+    "diverging-stack",
+    "voronoi",
+    "sankey",
+    "panel-series",
+    "bubble-matrix",
+    "aligned-bars",
+    "mekko",
+    "quadrant-area",
+    "population-pyramid",
+    "breakdown",
+    "unit-flow",
+    "composition",
+    "stacked-range",
+    "hierarchical-treemap",
+    "scatter-story",
+    "dot-comparison",
+    "component-diagram",
+    "columns-leaders",
+    "stack-bubble-breakdown",
+    "aligned-stack",
+    "cross-glyph",
+    "column-reference",
+    "ring-progress",
+    "concentric-rings",
+    "icon-circles",
+    "aligned-metrics",
+    "faceted-unit-flow",
+    "interval-columns",
+    "signed-squares",
+    "stacked-ledger",
+    "annotated-curve",
+    "connected-stacks",
+    "stack-summary",
+    "nested-voronoi",
+    "metric-grid",
+    "scenario-columns",
+    "share-highlight",
+    "area-companions",
+    "profile-facets",
+    "unit-ledger",
+    "advanced"
+  ],
+  "charts": [
+    {
+      "type": "aligned-bars",
+      "implementation": "assets/charts/aligned-bars.js",
+      "observedDataShapes": [
+        {
+          "metrics": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "max": "number",
+                "unit": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                }
+              }
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "metrics": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "unit": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "max": "number",
+                "parts": {
+                  "arrayItems": [
+                    {
+                      "arrayItems": [
+                        "string"
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "unit": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "max": "number",
+                "track": "boolean"
+              }
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    {
+                      "arrayItems": [
+                        "number"
+                      ]
+                    },
+                    "number"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "aligned-metrics",
+      "implementation": "assets/charts/aligned-metrics.js",
+      "observedDataShapes": [
+        {
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "periods": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                },
+                "metric1": "number",
+                "metric2": "number",
+                "metric3": "number"
+              }
+            ]
+          }
+        }
+      ],
+      "optionalPresentationFields": {
+        "metricLabels": [
+          [
+            "string"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "aligned-stack",
+      "implementation": "assets/charts/aligned-stack.js",
+      "observedDataShapes": [
+        {
+          "series": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "metricMax": "number",
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                },
+                "metric": "number"
+              }
+            ]
+          }
+        }
+      ],
+      "optionalPresentationFields": {
+        "stackLabel": [
+          "string"
+        ],
+        "metricLabel": [
+          "string"
+        ],
+        "metricUnit": [
+          "string"
+        ],
+        "stackMax": "number"
+      }
+    },
+    {
+      "type": "annotated-curve",
+      "implementation": "assets/charts/annotated-curve.js",
+      "observedDataShapes": [
+        {
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "xDomain": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "yDomain": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "xTicks": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "xLabel": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "yLabel": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "guides": {
+            "arrayItems": [
+              {
+                "x": "number",
+                "label": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                }
+              }
+            ]
+          },
+          "series": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "points": {
+                  "arrayItems": [
+                    {
+                      "x": "number",
+                      "y": "number"
+                    },
+                    {
+                      "x": "number",
+                      "y": "number",
+                      "name": {
+                        "arrayItems": [
+                          "string"
+                        ]
+                      },
+                      "dx": "number",
+                      "dy": "number",
+                      "dxSmall": "number",
+                      "dySmall": "number"
+                    },
+                    {
+                      "x": "number",
+                      "y": "number",
+                      "name": {
+                        "arrayItems": [
+                          "string"
+                        ]
+                      },
+                      "dx": "number",
+                      "dy": "number",
+                      "dxSmall": "number"
+                    },
+                    {
+                      "x": "number",
+                      "y": "number",
+                      "dx": "number",
+                      "dy": "number"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "xDomain": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "yDomain": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "xTicks": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "xLabel": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "yLabel": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "sizeLabel": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "series": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "points": {
+                  "arrayItems": [
+                    {
+                      "x": "number",
+                      "y": "number"
+                    },
+                    {
+                      "x": "number",
+                      "y": "number",
+                      "size": "number",
+                      "dx": "number",
+                      "dy": "number",
+                      "dySmall": "number"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "xDomain": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "yDomain": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "xTicks": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "xLabel": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "yLabel": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "between": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "series": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "points": {
+                  "arrayItems": [
+                    {
+                      "x": "number",
+                      "y": "number"
+                    },
+                    {
+                      "x": "number",
+                      "y": "number",
+                      "open": "boolean",
+                      "name": {
+                        "arrayItems": [
+                          "string"
+                        ]
+                      },
+                      "dx": "number",
+                      "dy": "number"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "annual-calendar",
+      "implementation": "assets/charts/core-matrix.js",
+      "observedDataShapes": [
+        {
+          "year": "number",
+          "values": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "arc-matrix",
+      "implementation": "assets/charts/core-matrix.js",
+      "observedDataShapes": [
+        {
+          "x": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "y": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "cells": {
+            "arrayItems": [
+              {
+                "x": "number",
+                "y": "number",
+                "value": "number"
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "area-companions",
+      "implementation": "assets/charts/area-companions.js",
+      "observedDataShapes": [
+        {
+          "primaryName": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "primaryUnit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "secondaryName": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "secondaryUnit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "secondaryMax": "number",
+          "groups": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "parts": {
+                  "arrayItems": [
+                    {
+                      "name": {
+                        "arrayItems": [
+                          "string"
+                        ]
+                      },
+                      "value": "number",
+                      "secondary": "number"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "connect": "boolean"
+        }
+      ]
+    },
+    {
+      "type": "bars",
+      "implementation": "assets/charts/bars.js",
+      "observedDataShapes": [
+        {
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number"
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "max": "number",
+          "focus": "number",
+          "labelWidth": "number",
+          "valueColumn": "boolean"
+        },
+        {
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number"
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        },
+        {
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number"
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "focus": "number"
+        },
+        {
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number"
+              }
+            ]
+          },
+          "min": "number",
+          "max": "number",
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        },
+        {
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number"
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "max": "number",
+          "focus": "number",
+          "sample": "number"
+        },
+        {
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number"
+              },
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number",
+                "projected": "boolean"
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "max": "number",
+          "note": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        },
+        {
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number"
+              }
+            ]
+          },
+          "min": "number",
+          "max": "number",
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "focus": "number"
+        },
+        {
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number"
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "max": "number",
+          "focus": "number",
+          "sample": "number",
+          "lollipop": "boolean"
+        },
+        {
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "max": "number",
+          "track": "boolean",
+          "labelWidth": "number",
+          "focus": "number",
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number"
+              }
+            ]
+          }
+        },
+        {
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "min": "number",
+          "max": "number",
+          "labelWidth": "number",
+          "groupNames": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number",
+                "group": "number"
+              }
+            ]
+          },
+          "valueColumn": "boolean"
+        }
+      ]
+    },
+    {
+      "type": "beaded-change",
+      "implementation": "assets/charts/core-cartesian.js",
+      "observedDataShapes": [
+        {
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "unitSize": "number",
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "bipolar-comparison",
+      "implementation": "assets/charts/core-cartesian.js",
+      "observedDataShapes": [
+        {
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "ends": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "series": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "branch-tree",
+      "implementation": "assets/charts/core-networks.js",
+      "observedDataShapes": [
+        {
+          "groups": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "children": {
+                  "arrayItems": [
+                    {
+                      "arrayItems": [
+                        "string"
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "root": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "breakdown",
+      "implementation": "assets/charts/breakdown.js",
+      "observedDataShapes": [
+        {
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number",
+                "selected": "boolean"
+              },
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number"
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "totalName": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "subsetName": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "bubble-comparison",
+      "implementation": "assets/charts/bubble-comparison.js",
+      "observedDataShapes": [
+        {
+          "series": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "arrow": "boolean"
+        }
+      ]
+    },
+    {
+      "type": "bubble-matrix",
+      "implementation": "assets/charts/bubble-matrix.js",
+      "observedDataShapes": [
+        {
+          "columns": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "sizeMetric": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "colorMetric": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "columns": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "sizeMetric": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "colorMetric": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "sizeUnit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "colorUnit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "sizeLegend": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "colorBreaks": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                },
+                "colors": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "dividerBefore": "number"
+        }
+      ]
+    },
+    {
+      "type": "bubbles",
+      "implementation": "assets/charts/bubbles.js",
+      "observedDataShapes": [
+        {
+          "arrayItems": [
+            {
+              "arrayItems": [
+                "string",
+                "number",
+                {
+                  "anchor": {
+                    "arrayItems": [
+                      "number",
+                      "string"
+                    ]
+                  },
+                  "mobileOffset": {
+                    "arrayItems": [
+                      "number"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "capabilities",
+      "implementation": "assets/charts/capabilities.js",
+      "observedDataShapes": [
+        {
+          "groups": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "techniques": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "group": "number",
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "footnote": "number",
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "threshold": "number",
+          "precision": "string"
+        }
+      ],
+      "optionalPresentationFields": {
+        "lowLabel": [
+          "string"
+        ],
+        "highLabel": [
+          "string"
+        ]
+      }
+    },
+    {
+      "type": "category-wave",
+      "implementation": "assets/charts/core-distributions.js",
+      "observedDataShapes": [
+        {
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number"
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "change-waterfall",
+      "implementation": "assets/charts/core-cartesian.js",
+      "observedDataShapes": [
+        {
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number"
+              }
+            ]
+          },
+          "totalIndices": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "column-reference",
+      "implementation": "assets/charts/column-reference.js",
+      "observedDataShapes": [
+        {
+          "years": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "max": "number",
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "groups": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                },
+                "group": "number"
+              }
+            ]
+          },
+          "references": {
+            "arrayItems": [
+              {
+                "value": "number",
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "columns-leaders",
+      "implementation": "assets/charts/columns-leaders.js",
+      "observedDataShapes": [
+        {
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number"
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "max": "number",
+          "focus": "number",
+          "sample": "number"
+        }
+      ]
+    },
+    {
+      "type": "component-diagram",
+      "implementation": "assets/charts/component-diagram.js",
+      "observedDataShapes": [
+        {
+          "figure": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "parts": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "x": "number",
+                "y": "number",
+                "focus": "boolean"
+              }
+            ]
+          },
+          "detailTitle": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    {
+                      "name": {
+                        "arrayItems": [
+                          "string"
+                        ]
+                      },
+                      "value": "number",
+                      "color": "number",
+                      "focus": "boolean"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "composition",
+      "implementation": "assets/charts/composition.js",
+      "observedDataShapes": [
+        {
+          "panels": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "type": "string",
+                "height": "number",
+                "data": {
+                  "rows": {
+                    "arrayItems": [
+                      {
+                        "name": {
+                          "arrayItems": [
+                            "string"
+                          ]
+                        },
+                        "short": {
+                          "arrayItems": [
+                            "string"
+                          ]
+                        },
+                        "value": "number"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "type": "string",
+                "height": "number",
+                "data": {
+                  "rows": {
+                    "arrayItems": [
+                      {
+                        "name": {
+                          "arrayItems": [
+                            "string"
+                          ]
+                        },
+                        "value": "number"
+                      }
+                    ]
+                  },
+                  "max": "number",
+                  "unit": {
+                    "arrayItems": [
+                      "string"
+                    ]
+                  },
+                  "reference": "number",
+                  "referenceLabel": {
+                    "arrayItems": [
+                      "string"
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "panels": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "type": "string",
+                "height": "number",
+                "data": {
+                  "unit": {
+                    "arrayItems": [
+                      "string"
+                    ]
+                  },
+                  "rows": {
+                    "arrayItems": [
+                      {
+                        "name": {
+                          "arrayItems": [
+                            "string"
+                          ]
+                        },
+                        "short": {
+                          "arrayItems": [
+                            "string"
+                          ]
+                        },
+                        "value": "number"
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "panels": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "type": "string",
+                "height": "number",
+                "data": {
+                  "money": "boolean",
+                  "max": "number",
+                  "unit": {
+                    "arrayItems": [
+                      "string"
+                    ]
+                  },
+                  "series": {
+                    "arrayItems": [
+                      {
+                        "arrayItems": [
+                          "string"
+                        ]
+                      }
+                    ]
+                  },
+                  "rows": {
+                    "arrayItems": [
+                      {
+                        "name": {
+                          "arrayItems": [
+                            "string"
+                          ]
+                        },
+                        "values": {
+                          "arrayItems": [
+                            "number"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "type": "string",
+                "height": "number",
+                "data": {
+                  "periods": {
+                    "arrayItems": [
+                      {
+                        "name": {
+                          "arrayItems": [
+                            "string"
+                          ]
+                        },
+                        "years": {
+                          "arrayItems": [
+                            "string"
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  "rows": {
+                    "arrayItems": [
+                      {
+                        "name": {
+                          "arrayItems": [
+                            "string"
+                          ]
+                        },
+                        "unit": {
+                          "arrayItems": [
+                            "string"
+                          ]
+                        },
+                        "values": {
+                          "arrayItems": [
+                            {
+                              "value": "number"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "cols": "number",
+          "sharedLegend": "boolean",
+          "panels": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "type": "string",
+                "height": "number",
+                "data": {
+                  "series": {
+                    "arrayItems": [
+                      {
+                        "name": {
+                          "arrayItems": [
+                            "string"
+                          ]
+                        },
+                        "values": {
+                          "arrayItems": [
+                            "number"
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  "dates": {
+                    "arrayItems": [
+                      {
+                        "arrayItems": [
+                          "string"
+                        ]
+                      }
+                    ]
+                  },
+                  "samples": {
+                    "arrayItems": [
+                      "number"
+                    ]
+                  },
+                  "axisDates": {
+                    "arrayItems": [
+                      {
+                        "arrayItems": [
+                          "string"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "cols": "number",
+          "panels": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "type": "string",
+                "height": "number",
+                "data": {
+                  "unit": {
+                    "arrayItems": [
+                      "string"
+                    ]
+                  },
+                  "rows": {
+                    "arrayItems": [
+                      {
+                        "name": {
+                          "arrayItems": [
+                            "string"
+                          ]
+                        },
+                        "short": {
+                          "arrayItems": [
+                            "string"
+                          ]
+                        },
+                        "value": "number",
+                        "color": "number"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "type": "string",
+                "height": "number",
+                "data": {
+                  "unit": {
+                    "arrayItems": [
+                      "string"
+                    ]
+                  },
+                  "rows": {
+                    "arrayItems": [
+                      {
+                        "name": {
+                          "arrayItems": [
+                            "string"
+                          ]
+                        },
+                        "short": {
+                          "arrayItems": [
+                            "string"
+                          ]
+                        },
+                        "value": "number",
+                        "role": "string"
+                      },
+                      {
+                        "name": {
+                          "arrayItems": [
+                            "string"
+                          ]
+                        },
+                        "short": {
+                          "arrayItems": [
+                            "string"
+                          ]
+                        },
+                        "value": "number",
+                        "color": "number"
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "cols": "number",
+          "panels": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "type": "string",
+                "height": "number",
+                "data": {
+                  "unit": {
+                    "arrayItems": [
+                      "string"
+                    ]
+                  },
+                  "rows": {
+                    "arrayItems": [
+                      {
+                        "name": {
+                          "arrayItems": [
+                            "string"
+                          ]
+                        },
+                        "short": {
+                          "arrayItems": [
+                            "string"
+                          ]
+                        },
+                        "value": "number"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "type": "string",
+                "height": "number",
+                "data": {
+                  "unit": {
+                    "arrayItems": [
+                      "string"
+                    ]
+                  },
+                  "max": "number",
+                  "groupNames": {
+                    "arrayItems": [
+                      {
+                        "arrayItems": [
+                          "string"
+                        ]
+                      }
+                    ]
+                  },
+                  "rows": {
+                    "arrayItems": [
+                      {
+                        "name": {
+                          "arrayItems": [
+                            "string"
+                          ]
+                        },
+                        "value": "number",
+                        "group": "number"
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "concentric-rings",
+      "implementation": "assets/charts/concentric-rings.js",
+      "observedDataShapes": [
+        {
+          "series": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "connected-stacks",
+      "implementation": "assets/charts/connected-stacks.js",
+      "observedDataShapes": [
+        {
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "years": "number",
+          "series": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "periods": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "years": "number",
+          "series": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "contributions": "boolean",
+          "orders": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "number"
+                ]
+              }
+            ]
+          },
+          "periods": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "contribution-pareto",
+      "implementation": "assets/charts/advanced.js",
+      "observedDataShapes": [
+        {
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "cross-glyph",
+      "implementation": "assets/charts/cross-glyph.js",
+      "observedDataShapes": [
+        {
+          "series": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "cumulative-distribution",
+      "implementation": "assets/charts/advanced.js",
+      "observedDataShapes": [
+        {
+          "values": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "max": "number",
+          "threshold": "number",
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "cumulative-growth",
+      "implementation": "assets/charts/core-dynamic.js",
+      "observedDataShapes": [
+        {
+          "values": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "daily-barcode",
+      "implementation": "assets/charts/core-distributions.js",
+      "observedDataShapes": [
+        {
+          "dates": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "values": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "daily-ranges",
+      "implementation": "assets/charts/core-cartesian.js",
+      "observedDataShapes": [
+        {
+          "dates": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "low": "number",
+                "high": "number"
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "decision-grid",
+      "implementation": "assets/charts/advanced.js",
+      "observedDataShapes": [
+        {
+          "options": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    {
+                      "arrayItems": [
+                        "string"
+                      ]
+                    }
+                  ]
+                },
+                "basis": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "delivery-roadmap",
+      "implementation": "assets/charts/advanced.js",
+      "observedDataShapes": [
+        {
+          "start": "string",
+          "end": "string",
+          "ticks": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "start": "string",
+                "end": "string",
+                "owner": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "actual": "boolean",
+                "deliverable": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                }
+              },
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "start": "string",
+                "end": "string",
+                "owner": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "actual": "boolean",
+                "depends": "number",
+                "deliverable": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "density-ridges",
+      "implementation": "assets/charts/core-distributions.js",
+      "observedDataShapes": [
+        {
+          "groups": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "domain": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "diverging-stack",
+      "implementation": "assets/charts/diverging-stack.js",
+      "observedDataShapes": [
+        {
+          "series": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "series": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                },
+                "net": "number"
+              }
+            ]
+          }
+        },
+        {
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "domain": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "leaders": "boolean",
+          "series": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                },
+                "range": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "donut",
+      "implementation": "assets/charts/donut.js",
+      "observedDataShapes": [
+        {
+          "names": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "periods": {
+            "arrayItems": [
+              {
+                "year": "number",
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "periods": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "names": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "reference": "number",
+          "referenceLabel": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "dot-comparison",
+      "implementation": "assets/charts/dot-comparison.js",
+      "observedDataShapes": [
+        {
+          "series": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "max": "number",
+          "rangeHighlight": "boolean"
+        },
+        {
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "min": "number",
+          "max": "number",
+          "arrow": "boolean",
+          "series": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "group": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              },
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "group": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "null",
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "groupedRows": "boolean"
+        }
+      ]
+    },
+    {
+      "type": "drop-scatter",
+      "implementation": "assets/charts/core-cartesian.js",
+      "observedDataShapes": [
+        {
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "x": "number",
+                "y": "number"
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ],
+      "optionalPresentationFields": {
+        "xLabel": [
+          "string"
+        ],
+        "yLabel": [
+          "string"
+        ],
+        "xUnit": [
+          "string"
+        ],
+        "yUnit": [
+          "string"
+        ],
+        "xDomain": [
+          "number"
+        ],
+        "yDomain": [
+          "number"
+        ]
+      }
+    },
+    {
+      "type": "event-clock",
+      "implementation": "assets/charts/core-radial.js",
+      "observedDataShapes": [
+        {
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "hour": "number",
+                "value": "number"
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "faceted-unit-flow",
+      "implementation": "assets/charts/faceted-unit-flow.js",
+      "observedDataShapes": [
+        {
+          "series": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "destinations": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "left": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                },
+                "right": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "flows",
+      "implementation": "assets/charts/flows.js",
+      "observedDataShapes": [
+        {
+          "nodes": {
+            "arrayItems": [
+              {
+                "id": "string",
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number",
+                "x": "number",
+                "y": "number",
+                "group": "number"
+              },
+              {
+                "id": "string",
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "null",
+                "x": "number",
+                "y": "number",
+                "group": "number"
+              },
+              {
+                "id": "string",
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "string",
+                "x": "number",
+                "y": "number",
+                "group": "number"
+              }
+            ]
+          },
+          "edges": {
+            "arrayItems": [
+              {
+                "source": "string",
+                "target": "string",
+                "relativeWidth": "number",
+                "amount": "null",
+                "precision": "string"
+              }
+            ]
+          },
+          "period": "string",
+          "unit": "string",
+          "coverage": "number"
+        }
+      ]
+    },
+    {
+      "type": "forecast-fan",
+      "implementation": "assets/charts/advanced.js",
+      "observedDataShapes": [
+        {
+          "max": "number",
+          "forecastFrom": "number",
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "year": "string",
+                "value": "number"
+              },
+              {
+                "year": "string",
+                "value": "number",
+                "p05": "number",
+                "p25": "number",
+                "p75": "number",
+                "p95": "number"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "group-boxes",
+      "implementation": "assets/charts/core-cartesian.js",
+      "observedDataShapes": [
+        {
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "min": "number",
+                "q1": "number",
+                "median": "number",
+                "q3": "number",
+                "max": "number",
+                "outliers": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "group-violins",
+      "implementation": "assets/charts/core-distributions.js",
+      "observedDataShapes": [
+        {
+          "groups": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "domain": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "grouped-bars",
+      "implementation": "assets/charts/grouped-bars.js",
+      "observedDataShapes": [
+        {
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "max": "number",
+          "series": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "series": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "max": "number",
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "ordinal": "boolean",
+          "min": "number",
+          "max": "number",
+          "series": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "reference": "number",
+          "referenceName": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "optionalPresentationFields": {
+        "deltaUnit": [
+          "string"
+        ]
+      }
+    },
+    {
+      "type": "grouped-dot-stacks",
+      "implementation": "assets/charts/core-units.js",
+      "observedDataShapes": [
+        {
+          "groups": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "columns": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "hierarchical-treemap",
+      "implementation": "assets/charts/hierarchical-treemap.js",
+      "observedDataShapes": [
+        {
+          "groups": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "rows": {
+                  "arrayItems": [
+                    {
+                      "name": {
+                        "arrayItems": [
+                          "string"
+                        ]
+                      },
+                      "value": "number"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        },
+        {
+          "groups": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "rows": {
+                  "arrayItems": [
+                    {
+                      "name": {
+                        "arrayItems": [
+                          "string"
+                        ]
+                      },
+                      "value": "number",
+                      "group": "number"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "icon-circles",
+      "implementation": "assets/charts/icon-circles.js",
+      "observedDataShapes": [
+        {
+          "perIcon": "number",
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "interval-columns",
+      "implementation": "assets/charts/interval-columns.js",
+      "observedDataShapes": [
+        {
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "low": "number",
+                "high": "number"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "launch-fan",
+      "implementation": "assets/charts/core-radial.js",
+      "observedDataShapes": [
+        {
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "born": "number",
+                "value": "number"
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "lifecycle-history",
+      "implementation": "assets/charts/core-matrix.js",
+      "observedDataShapes": [
+        {
+          "years": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "states": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ],
+      "optionalPresentationFields": {
+        "stateLabels": [
+          [
+            "string"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "meaningful-bins",
+      "implementation": "assets/charts/core-cartesian.js",
+      "observedDataShapes": [
+        {
+          "edges": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "counts": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "mekko",
+      "implementation": "assets/charts/mekko.js",
+      "observedDataShapes": [
+        {
+          "mode": "string",
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "series": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "columns": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "mode": "string",
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "reference": "number",
+          "referenceName": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "columns": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "width": "number",
+                "growth": "number"
+              }
+            ]
+          }
+        },
+        {
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "connect": "boolean",
+          "shareOnly": "boolean",
+          "series": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "columns": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              },
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                },
+                "range": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                },
+                "shareRanges": {
+                  "arrayItems": [
+                    {
+                      "arrayItems": [
+                        "number"
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "mode": "string",
+          "reference": "number",
+          "referenceName": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "groupNames": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "columns": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "width": "number",
+                "growth": "number",
+                "group": "number"
+              },
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "width": "number",
+                "growth": "number",
+                "upperGrowth": "number",
+                "group": "number"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "membership-columns",
+      "implementation": "assets/charts/core-networks.js",
+      "observedDataShapes": [
+        {
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "group": "number",
+                "value": "number",
+                "born": "number"
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "groupNames": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "metric-carousel",
+      "implementation": "assets/charts/core-dynamic.js",
+      "observedDataShapes": [
+        {
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "metrics": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "metric-grid",
+      "implementation": "assets/charts/metric-grid.js",
+      "observedDataShapes": [
+        {
+          "columns": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "metrics": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "unit": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "kind": "string",
+                "max": "number",
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              },
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "unit": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "kind": "string",
+                "max": "number",
+                "frame": "boolean",
+                "reference": "number",
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "columns": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "metrics": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "unit": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "kind": "string",
+                "max": "number",
+                "frame": "boolean",
+                "previous": "boolean",
+                "arrow": "boolean",
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "columns": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "metrics": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "unit": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "kind": "string",
+                "max": "number",
+                "values": {
+                  "arrayItems": [
+                    "number",
+                    "null"
+                  ]
+                }
+              },
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "unit": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "kind": "string",
+                "max": "number",
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              },
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "unit": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "kind": "string",
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "multiples",
+      "implementation": "assets/charts/multiples.js",
+      "observedDataShapes": [
+        {
+          "dates": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "samples": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "values": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "number"
+                ]
+              }
+            ]
+          },
+          "panels": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "metric": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "nested-voronoi",
+      "implementation": "assets/charts/nested-voronoi.js",
+      "observedDataShapes": [
+        {
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "groups": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "rows": {
+                  "arrayItems": [
+                    {
+                      "name": {
+                        "arrayItems": [
+                          "string"
+                        ]
+                      },
+                      "value": "number"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "numeric-matrix",
+      "implementation": "assets/charts/core-matrix.js",
+      "observedDataShapes": [
+        {
+          "x": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "y": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "cells": {
+            "arrayItems": [
+              {
+                "x": "number",
+                "y": "number",
+                "value": "number"
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        },
+        {
+          "x": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "y": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "cells": {
+            "arrayItems": [
+              {
+                "x": "number",
+                "y": "number",
+                "value": "number"
+              }
+            ]
+          },
+          "highlight": "boolean",
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "ohlc-candles",
+      "implementation": "assets/charts/core-cartesian.js",
+      "observedDataShapes": [
+        {
+          "dates": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "open": "number",
+                "close": "number",
+                "high": "number",
+                "low": "number"
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "orbit-network",
+      "implementation": "assets/charts/advanced.js",
+      "observedDataShapes": [
+        {
+          "nodes": {
+            "arrayItems": [
+              {
+                "id": "number",
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                }
+              }
+            ]
+          },
+          "links": {
+            "arrayItems": [
+              {
+                "source": "number",
+                "target": "number",
+                "value": "number"
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "paired-series",
+      "implementation": "assets/charts/core-cartesian.js",
+      "observedDataShapes": [
+        {
+          "dates": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "series": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "note": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        },
+        {
+          "dates": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "series": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        },
+        {
+          "dates": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "series": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "area": "boolean",
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "panel-series",
+      "implementation": "assets/charts/panel-series.js",
+      "observedDataShapes": [
+        {
+          "mode": "string",
+          "max": "number",
+          "dates": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "panels": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "series": {
+                  "arrayItems": [
+                    {
+                      "name": {
+                        "arrayItems": [
+                          "string"
+                        ]
+                      },
+                      "values": {
+                        "arrayItems": [
+                          "number"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "mode": "string",
+          "forecastFrom": "number",
+          "dates": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "panels": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "series": {
+                  "arrayItems": [
+                    {
+                      "name": {
+                        "arrayItems": [
+                          "string"
+                        ]
+                      },
+                      "values": {
+                        "arrayItems": [
+                          "number"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "mode": "string",
+          "max": "number",
+          "dates": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "guides": {
+            "arrayItems": [
+              {
+                "index": "number",
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                }
+              }
+            ]
+          },
+          "panels": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "series": {
+                  "arrayItems": [
+                    {
+                      "name": {
+                        "arrayItems": [
+                          "string"
+                        ]
+                      },
+                      "values": {
+                        "arrayItems": [
+                          "number"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "mode": "string",
+          "forecastFrom": "number",
+          "max": "number",
+          "dates": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "panels": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "series": {
+                  "arrayItems": [
+                    {
+                      "name": {
+                        "arrayItems": [
+                          "string"
+                        ]
+                      },
+                      "values": {
+                        "arrayItems": [
+                          "number"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "band": {
+                  "low": {
+                    "arrayItems": [
+                      "number"
+                    ]
+                  },
+                  "high": {
+                    "arrayItems": [
+                      "number"
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "mode": "string",
+          "max": "number",
+          "dates": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "panels": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "series": {
+                  "arrayItems": [
+                    {
+                      "name": {
+                        "arrayItems": [
+                          "string"
+                        ]
+                      },
+                      "values": {
+                        "arrayItems": [
+                          "number"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "event": {
+                  "from": "number",
+                  "to": "number",
+                  "name": {
+                    "arrayItems": [
+                      "string"
+                    ]
+                  }
+                }
+              },
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "series": {
+                  "arrayItems": [
+                    {
+                      "name": {
+                        "arrayItems": [
+                          "string"
+                        ]
+                      },
+                      "values": {
+                        "arrayItems": [
+                          "number"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "dates": {
+                  "arrayItems": [
+                    {
+                      "arrayItems": [
+                        "string"
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "widths": {
+            "arrayItems": [
+              "number"
+            ]
+          }
+        },
+        {
+          "mode": "string",
+          "forecastFrom": "number",
+          "max": "number",
+          "dates": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "panels": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "series": {
+                  "arrayItems": [
+                    {
+                      "name": {
+                        "arrayItems": [
+                          "string"
+                        ]
+                      },
+                      "values": {
+                        "arrayItems": [
+                          "number"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "band": {
+                  "low": {
+                    "arrayItems": [
+                      "number"
+                    ]
+                  },
+                  "high": {
+                    "arrayItems": [
+                      "number"
+                    ]
+                  }
+                },
+                "gap": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "mode": "string",
+          "max": "number",
+          "reference": "number",
+          "referenceLabel": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "dates": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "panels": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "series": {
+                  "arrayItems": [
+                    {
+                      "name": {
+                        "arrayItems": [
+                          "string"
+                        ]
+                      },
+                      "values": {
+                        "arrayItems": [
+                          "number"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "max": "number",
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "dates": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "panels": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "series": {
+                  "arrayItems": [
+                    {
+                      "name": {
+                        "arrayItems": [
+                          "string"
+                        ]
+                      },
+                      "values": {
+                        "arrayItems": [
+                          "number"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "difference": "boolean"
+              }
+            ]
+          }
+        },
+        {
+          "max": "number",
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "dates": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "positions": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "panels": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "series": {
+                  "arrayItems": [
+                    {
+                      "name": {
+                        "arrayItems": [
+                          "string"
+                        ]
+                      },
+                      "values": {
+                        "arrayItems": [
+                          "number"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "difference": "boolean"
+              }
+            ]
+          },
+          "samples": {
+            "arrayItems": [
+              "number"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "parallel-measures",
+      "implementation": "assets/charts/core-networks.js",
+      "observedDataShapes": [
+        {
+          "domains": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "number"
+                ]
+              }
+            ]
+          },
+          "dimensions": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "petal-counts",
+      "implementation": "assets/charts/core-radial.js",
+      "observedDataShapes": [
+        {
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number"
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "pictogram",
+      "implementation": "assets/charts/pictogram.js",
+      "observedDataShapes": [
+        {
+          "shape": "string",
+          "unitValue": "number",
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "summary": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number"
+              }
+            ]
+          }
+        },
+        {
+          "shape": "string",
+          "unitValue": "number",
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "summary": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number"
+              }
+            ]
+          },
+          "bracketIndexes": {
+            "arrayItems": [
+              "number"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "population-pyramid",
+      "implementation": "assets/charts/population-pyramid.js",
+      "observedDataShapes": [
+        {
+          "sides": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "center": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "note": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "profile-facets",
+      "implementation": "assets/charts/profile-facets.js",
+      "observedDataShapes": [
+        {
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "totalUnit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "ages": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "sides": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "panels": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "series": {
+                  "arrayItems": [
+                    {
+                      "name": {
+                        "arrayItems": [
+                          "string"
+                        ]
+                      },
+                      "left": {
+                        "arrayItems": [
+                          "number"
+                        ]
+                      },
+                      "right": {
+                        "arrayItems": [
+                          "number"
+                        ]
+                      },
+                      "total": "number"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "bars": "boolean",
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "totalUnit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "ages": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "panels": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "max": "number",
+                "levels": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                },
+                "bracket": {
+                  "from": "number",
+                  "to": "number",
+                  "name": {
+                    "arrayItems": [
+                      "string"
+                    ]
+                  }
+                },
+                "series": {
+                  "arrayItems": [
+                    {
+                      "name": {
+                        "arrayItems": [
+                          "string"
+                        ]
+                      },
+                      "left": {
+                        "arrayItems": [
+                          "number"
+                        ]
+                      },
+                      "right": {
+                        "arrayItems": [
+                          "number"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "levelNames": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "proportional-squares",
+      "implementation": "assets/charts/proportional-squares.js",
+      "observedDataShapes": [
+        {
+          "series": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "series": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "groups": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "number"
+                ]
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "series": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "growthBracket": {
+            "years": "number"
+          }
+        }
+      ]
+    },
+    {
+      "type": "quadrant-area",
+      "implementation": "assets/charts/quadrant-area.js",
+      "observedDataShapes": [
+        {
+          "panels": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "names": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "centeredSquares": "boolean",
+          "names": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "panels": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "optionalPresentationFields": {
+        "xLabel": [
+          "string"
+        ],
+        "yLabel": [
+          "string"
+        ]
+      }
+    },
+    {
+      "type": "radial-membership",
+      "implementation": "assets/charts/core-networks.js",
+      "observedDataShapes": [
+        {
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "group": "number",
+                "value": "number",
+                "born": "number"
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "groupNames": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "radial-share-intensity",
+      "implementation": "assets/charts/core-radial.js",
+      "observedDataShapes": [
+        {
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number",
+                "intensity": "number"
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "radial-timeline",
+      "implementation": "assets/charts/radial-timeline.js",
+      "observedDataShapes": [
+        {
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number"
+              }
+            ]
+          },
+          "dots": "boolean"
+        }
+      ],
+      "optionalPresentationFields": {
+        "unit": [
+          "string"
+        ],
+        "centerLabel": [
+          "string"
+        ]
+      }
+    },
+    {
+      "type": "range-bubbles",
+      "implementation": "assets/charts/range-bubbles.js",
+      "observedDataShapes": [
+        {
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "low": "number",
+                "high": "number"
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "range-dot",
+      "implementation": "assets/charts/range-dot.js",
+      "observedDataShapes": [
+        {
+          "ends": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "low": "number",
+                "high": "number"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "rank-paths",
+      "implementation": "assets/charts/core-networks.js",
+      "observedDataShapes": [
+        {
+          "dates": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "rank-race",
+      "implementation": "assets/charts/core-dynamic.js",
+      "observedDataShapes": [
+        {
+          "dates": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "record-beeswarm",
+      "implementation": "assets/charts/core-distributions.js",
+      "observedDataShapes": [
+        {
+          "groups": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "domain": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "record-strips",
+      "implementation": "assets/charts/core-distributions.js",
+      "observedDataShapes": [
+        {
+          "groups": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "domain": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "retention-cohorts",
+      "implementation": "assets/charts/advanced.js",
+      "observedDataShapes": [
+        {
+          "periods": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "n": "number",
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              },
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "n": "number",
+                "values": {
+                  "arrayItems": [
+                    "number",
+                    "null"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "ribbons",
+      "implementation": "assets/charts/ribbons.js",
+      "observedDataShapes": [
+        {
+          "names": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "before": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "after": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "years": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "ring-network",
+      "implementation": "assets/charts/core-networks.js",
+      "observedDataShapes": [
+        {
+          "nodes": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number"
+              }
+            ]
+          },
+          "links": {
+            "arrayItems": [
+              {
+                "source": "number",
+                "target": "number",
+                "value": "number"
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "ring-progress",
+      "implementation": "assets/charts/ring-progress.js",
+      "observedDataShapes": [
+        {
+          "years": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "rolling-window",
+      "implementation": "assets/charts/core-dynamic.js",
+      "observedDataShapes": [
+        {
+          "values": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "window": "number",
+          "sampleSeconds": "number",
+          "windowSeconds": "number",
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "route-threads",
+      "implementation": "assets/charts/advanced.js",
+      "observedDataShapes": [
+        {
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "bundle": "number",
+                "value": "number",
+                "positions": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "bundles": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "stages": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "sankey",
+      "implementation": "assets/charts/sankey.js",
+      "observedDataShapes": [
+        {
+          "inputs": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number"
+              }
+            ]
+          },
+          "outputs": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number"
+              }
+            ]
+          },
+          "links": {
+            "arrayItems": [
+              {
+                "source": "number",
+                "target": "number",
+                "value": "number"
+              }
+            ]
+          },
+          "columnNames": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        },
+        {
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "totalName": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "columnNames": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "inputs": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number"
+              }
+            ]
+          },
+          "outputs": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number"
+              }
+            ]
+          },
+          "feedback": {
+            "arrayItems": [
+              "number"
+            ]
+          }
+        },
+        {
+          "money": "boolean",
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "columnNames": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "inputs": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number"
+              }
+            ]
+          },
+          "outputs": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number",
+                "net": "number"
+              }
+            ]
+          },
+          "links": {
+            "arrayItems": [
+              {
+                "source": "number",
+                "target": "number",
+                "value": "number",
+                "growth": "number"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "satellite-network",
+      "implementation": "assets/charts/core-networks.js",
+      "observedDataShapes": [
+        {
+          "nodes": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number"
+              }
+            ]
+          },
+          "links": {
+            "arrayItems": [
+              {
+                "source": "number",
+                "target": "number",
+                "value": "number"
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "scatter-story",
+      "implementation": "assets/charts/scatter-story.js",
+      "observedDataShapes": [
+        {
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "x": "number",
+                "y": "number",
+                "size": "number",
+                "focus": "boolean",
+                "labelBelow": "boolean"
+              }
+            ]
+          },
+          "xLabel": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "yLabel": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "sizeLabel": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "notes": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "logX": "boolean",
+          "highlightFrom": "number"
+        }
+      ]
+    },
+    {
+      "type": "scenario-columns",
+      "implementation": "assets/charts/scenario-columns.js",
+      "observedDataShapes": [
+        {
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "scenarios": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "actual": "number"
+              },
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "scenarios": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "growth": {
+            "from": "number",
+            "to": "number",
+            "scenario": "number",
+            "years": "number"
+          }
+        }
+      ]
+    },
+    {
+      "type": "sensitivity-range",
+      "implementation": "assets/charts/advanced.js",
+      "observedDataShapes": [
+        {
+          "extent": "number",
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "low": "number",
+                "high": "number"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "share-highlight",
+      "implementation": "assets/charts/share-highlight.js",
+      "observedDataShapes": [
+        {
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "years": "number",
+          "categories": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "periods": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "note": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "share-pie",
+      "implementation": "assets/charts/advanced.js",
+      "observedDataShapes": [
+        {
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "signed-squares",
+      "implementation": "assets/charts/signed-squares.js",
+      "observedDataShapes": [
+        {
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "negativeLabel": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "positiveLabel": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "encodingNote": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "single-progress",
+      "implementation": "assets/charts/core-units.js",
+      "observedDataShapes": [
+        {
+          "value": "number",
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "slope",
+      "implementation": "assets/charts/slope.js",
+      "observedDataShapes": [
+        {
+          "years": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "max": "number",
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "optionalPresentationFields": {
+        "unit": [
+          "string"
+        ],
+        "deltaUnit": [
+          "string"
+        ]
+      }
+    },
+    {
+      "type": "spring-network",
+      "implementation": "assets/charts/advanced.js",
+      "observedDataShapes": [
+        {
+          "nodes": {
+            "arrayItems": [
+              {
+                "id": "number",
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                }
+              }
+            ]
+          },
+          "links": {
+            "arrayItems": [
+              {
+                "source": "number",
+                "target": "number",
+                "value": "number"
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "stack-bubble-breakdown",
+      "implementation": "assets/charts/stack-bubble-breakdown.js",
+      "observedDataShapes": [
+        {
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number"
+              }
+            ]
+          },
+          "selected": "number",
+          "detailTitle": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "max": "number",
+          "factors": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number"
+              }
+            ]
+          }
+        }
+      ],
+      "optionalPresentationFields": {
+        "unit": [
+          "string"
+        ]
+      }
+    },
+    {
+      "type": "stack-summary",
+      "implementation": "assets/charts/stack-summary.js",
+      "observedDataShapes": [
+        {
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "max": "number",
+          "totals": "boolean",
+          "series": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "summaryTable": {
+            "headings": {
+              "arrayItems": [
+                {
+                  "arrayItems": [
+                    "string"
+                  ]
+                }
+              ]
+            },
+            "values": {
+              "arrayItems": [
+                {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              ]
+            },
+            "unit": "string",
+            "highlight": "number"
+          }
+        }
+      ]
+    },
+    {
+      "type": "stacked-area",
+      "implementation": "assets/charts/stacked-area.js",
+      "observedDataShapes": [
+        {
+          "dates": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "nominal": "boolean",
+          "series": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "max": "number",
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        },
+        {
+          "series": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "dates": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "samples": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "axisDates": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "series": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "dates": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "samples": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "axisDates": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "overlay": {
+            "name": {
+              "arrayItems": [
+                "string"
+              ]
+            },
+            "values": {
+              "arrayItems": [
+                "number"
+              ]
+            }
+          }
+        },
+        {
+          "dates": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "axisDates": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "series": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "endChanges": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "stepped": "boolean",
+          "max": "number",
+          "tick": "number",
+          "nominal": "boolean"
+        },
+        {
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "max": "number",
+          "nominal": "boolean",
+          "dates": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "positions": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "series": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "overlay": {
+            "name": {
+              "arrayItems": [
+                "string"
+              ]
+            },
+            "values": {
+              "arrayItems": [
+                "number"
+              ]
+            }
+          },
+          "eras": {
+            "arrayItems": [
+              {
+                "from": "number",
+                "to": "number",
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                }
+              }
+            ]
+          },
+          "intervals": {
+            "arrayItems": [
+              {
+                "from": "number",
+                "to": "number",
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                }
+              }
+            ]
+          },
+          "keypoints": {
+            "arrayItems": [
+              {
+                "index": "number",
+                "series": "string",
+                "label": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "dx": "number",
+                "dxSmall": "number",
+                "dy": "number",
+                "anchor": "string"
+              }
+            ]
+          }
+        },
+        {
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "max": "number",
+          "nominal": "boolean",
+          "changeTable": "boolean",
+          "dates": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "series": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "keypoints": {
+            "arrayItems": [
+              {
+                "index": "number",
+                "series": "string",
+                "label": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "dx": "number",
+                "dy": "number",
+                "anchor": "string"
+              }
+            ]
+          },
+          "insideLabels": {
+            "arrayItems": [
+              {
+                "index": "number",
+                "series": "number"
+              }
+            ]
+          }
+        },
+        {
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "nominal": "boolean",
+          "max": "number",
+          "cagrYears": "number",
+          "dates": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "series": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "insideLabels": {
+            "arrayItems": [
+              {
+                "index": "number",
+                "series": "number"
+              },
+              {
+                "index": "number",
+                "series": "number",
+                "leader": "boolean",
+                "dy": "number"
+              }
+            ]
+          }
+        },
+        {
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "max": "number",
+          "nominal": "boolean",
+          "dates": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "series": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "extras": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "unit": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "periodBracket": {
+            "from": "number",
+            "to": "number"
+          },
+          "keypoints": {
+            "arrayItems": [
+              {
+                "index": "number",
+                "series": "string",
+                "label": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "dx": "number",
+                "dy": "number",
+                "anchor": "string",
+                "extras": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "optionalPresentationFields": {
+        "changeUnit": [
+          "string"
+        ]
+      }
+    },
+    {
+      "type": "stacked-bars",
+      "implementation": "assets/charts/stacked-bars.js",
+      "observedDataShapes": [
+        {
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "series": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        },
+        {
+          "series": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "summary": {
+            "name": {
+              "arrayItems": [
+                "string"
+              ]
+            },
+            "indexes": {
+              "arrayItems": [
+                "number"
+              ]
+            },
+            "values": {
+              "arrayItems": [
+                "number"
+              ]
+            }
+          }
+        },
+        {
+          "series": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "ordinal": "boolean"
+        },
+        {
+          "series": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "ordinal": "boolean",
+          "annotations": {
+            "reference": "number",
+            "referenceLabel": {
+              "arrayItems": [
+                "string"
+              ]
+            },
+            "bracket": {
+              "arrayItems": [
+                "string"
+              ]
+            },
+            "values": {
+              "arrayItems": [
+                "number"
+              ]
+            },
+            "bottomLabel": {
+              "arrayItems": [
+                "string"
+              ]
+            }
+          }
+        },
+        {
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "max": "number",
+          "series": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "bottomTable": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                },
+                "unit": "string"
+              }
+            ]
+          }
+        },
+        {
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "max": "number",
+          "contiguous": "boolean",
+          "totals": "boolean",
+          "series": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "stacked-ledger",
+      "implementation": "assets/charts/stacked-ledger.js",
+      "observedDataShapes": [
+        {
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "series": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "brackets": {
+            "arrayItems": [
+              {
+                "start": "number",
+                "end": "number",
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                }
+              }
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          },
+          "ordinal": "boolean"
+        },
+        {
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "weighted": "boolean",
+          "weightLabel": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "summaryLabel": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "series": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "weight": "number",
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                },
+                "summary": "number"
+              }
+            ]
+          },
+          "contiguous": "boolean"
+        },
+        {
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "series": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "summaryLabel": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                },
+                "summary": "string",
+                "highlight": "boolean"
+              },
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                },
+                "summary": "string"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "stacked-range",
+      "implementation": "assets/charts/stacked-range.js",
+      "observedDataShapes": [
+        {
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "low": "number",
+                "high": "number"
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "rangeLabel": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "stage-funnel",
+      "implementation": "assets/charts/core-radial.js",
+      "observedDataShapes": [
+        {
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number"
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "status-yearbook",
+      "implementation": "assets/charts/core-matrix.js",
+      "observedDataShapes": [
+        {
+          "years": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    {
+                      "value": "number",
+                      "status": "number"
+                    }
+                  ]
+                },
+                "note": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                }
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ],
+      "optionalPresentationFields": {
+        "statusLabels": [
+          [
+            "string"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "target-tracks",
+      "implementation": "assets/charts/advanced.js",
+      "observedDataShapes": [
+        {
+          "max": "number",
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number",
+                "target": "number"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "ticked-donut",
+      "implementation": "assets/charts/core-units.js",
+      "observedDataShapes": [
+        {
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number"
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "timeline-table",
+      "implementation": "assets/charts/timeline-table.js",
+      "observedDataShapes": [
+        {
+          "periods": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "years": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                }
+              }
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "unit": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "money": "boolean",
+                "approx": "boolean",
+                "values": {
+                  "arrayItems": [
+                    {
+                      "value": "number",
+                      "less": "boolean"
+                    },
+                    {
+                      "value": "number"
+                    }
+                  ]
+                }
+              },
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "unit": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "money": "boolean",
+                "approx": "boolean",
+                "values": {
+                  "arrayItems": [
+                    {
+                      "value": "number"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "implementation": "assets/charts/timeseries.js",
+      "observedDataShapes": [
+        {
+          "times": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "series": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                },
+                "pattern": "number",
+                "color": "number"
+              }
+            ]
+          },
+          "yDomain": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "yStep": "number",
+          "xTicks": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "forecast": "number",
+          "precision": "string"
+        },
+        {
+          "times": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "series": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "description": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                },
+                "pattern": "number",
+                "color": "number"
+              }
+            ]
+          },
+          "yDomain": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "yStep": "number",
+          "xTicks": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "today": "number",
+          "precision": "string"
+        },
+        {
+          "times": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "series": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "values": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                },
+                "pattern": "number",
+                "color": "number"
+              }
+            ]
+          },
+          "yDomain": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "yStep": "number",
+          "xTicks": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "precision": "string",
+          "timePrecision": "string"
+        }
+      ],
+      "optionalPresentationFields": {
+        "unit": [
+          "string"
+        ],
+        "legendDots": "boolean",
+        "legendItalic": "boolean"
+      }
+    },
+    {
+      "type": "trajectory",
+      "implementation": "assets/charts/trajectory.js",
+      "observedDataShapes": [
+        {
+          "periods": {
+            "arrayItems": [
+              {
+                "period": "number",
+                "x": "number",
+                "y": "number",
+                "size": "number",
+                "level": "number"
+              }
+            ]
+          },
+          "sizeUnit": "string"
+        }
+      ],
+      "optionalPresentationFields": {
+        "xLabel": [
+          "string"
+        ],
+        "yLabel": [
+          "string"
+        ],
+        "sizeLabel": [
+          "string"
+        ],
+        "sizeUnit": [
+          "string"
+        ],
+        "levelLabel": [
+          "string"
+        ]
+      }
+    },
+    {
+      "type": "treemap",
+      "implementation": "assets/charts/treemap.js",
+      "observedDataShapes": [
+        {
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "short": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number"
+              }
+            ]
+          }
+        },
+        {
+          "diamond": "boolean",
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "short": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "unit-bars",
+      "implementation": "assets/charts/core-units.js",
+      "observedDataShapes": [
+        {
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number"
+              }
+            ]
+          },
+          "unitSize": "number",
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "unit-columns",
+      "implementation": "assets/charts/core-units.js",
+      "observedDataShapes": [
+        {
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number"
+              }
+            ]
+          },
+          "unitSize": "number",
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "unit-composition",
+      "implementation": "assets/charts/core-units.js",
+      "observedDataShapes": [
+        {
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number"
+              }
+            ]
+          },
+          "shape": "string",
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "unit-flow",
+      "implementation": "assets/charts/unit-flow.js",
+      "observedDataShapes": [
+        {
+          "origin": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number"
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "unitValue": "number"
+        }
+      ]
+    },
+    {
+      "type": "unit-ledger",
+      "implementation": "assets/charts/unit-ledger.js",
+      "observedDataShapes": [
+        {
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "stages": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "scores": {
+            "arrayItems": [
+              "number"
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "counts": {
+                  "arrayItems": [
+                    "number"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "venn",
+      "implementation": "assets/charts/venn.js",
+      "observedDataShapes": [
+        {
+          "rows": {
+            "arrayItems": [
+              {
+                "bits": "number",
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number"
+              }
+            ]
+          }
+        }
+      ],
+      "optionalPresentationFields": {
+        "unit": [
+          "string"
+        ]
+      }
+    },
+    {
+      "type": "voronoi",
+      "implementation": "assets/charts/voronoi.js",
+      "observedDataShapes": [
+        {
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "note": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number",
+                "group": "number"
+              }
+            ]
+          }
+        },
+        {
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number",
+                "group": "number"
+              }
+            ]
+          },
+          "money": "boolean",
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          },
+          "levels": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "note": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "waffle",
+      "implementation": "assets/charts/waffle.js",
+      "observedDataShapes": [
+        {
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "group": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number"
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        },
+        {
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number",
+                "group": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "focus": "boolean"
+              }
+            ]
+          }
+        },
+        {
+          "circle": "boolean",
+          "rows": {
+            "arrayItems": [
+              {
+                "name": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                },
+                "value": "number",
+                "group": {
+                  "arrayItems": [
+                    "string"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "weekly-dots",
+      "implementation": "assets/charts/core-matrix.js",
+      "observedDataShapes": [
+        {
+          "x": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "y": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "cells": {
+            "arrayItems": [
+              {
+                "x": "number",
+                "y": "number",
+                "value": "number"
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "weekly-heatmap",
+      "implementation": "assets/charts/core-matrix.js",
+      "observedDataShapes": [
+        {
+          "x": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "y": {
+            "arrayItems": [
+              {
+                "arrayItems": [
+                  "string"
+                ]
+              }
+            ]
+          },
+          "cells": {
+            "arrayItems": [
+              {
+                "x": "number",
+                "y": "number",
+                "value": "number"
+              }
+            ]
+          },
+          "unit": {
+            "arrayItems": [
+              "string"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "excludedFeatures": [
+    "Geographic maps"
+  ]
+}
